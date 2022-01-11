@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Preview Image</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../dist/css/image-preview.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="welcome-wrap">
+          <div class="photo" data-upload-item>
+            <input type="file" class="upload-btn" data-index="0" />
+            <div class="preview" data-preview></div>
+          </div>
+          <div class="text">
+            <h1>Hi, user</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
