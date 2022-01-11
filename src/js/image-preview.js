@@ -1,7 +1,7 @@
 //產生結構
 function createDOM(input, params, file, res) {
   const preview = input.closest('[data-upload-item]').querySelector('[data-preview]');
-  preview.innerHTML = '';
+  if (preview.querySelector('img')) preview.querySelector('img').remove();
   preview.appendChild(res.imgElement);
   const group = input.dataset.group;
   const inputIndex = input.dataset.index;

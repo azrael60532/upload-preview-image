@@ -21,6 +21,7 @@ main {
   background-color: #1f1f1f;
 }
 .welcome-wrap .photo {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -31,31 +32,29 @@ main {
 .welcome-wrap .photo.uploaded {
   background-color: transparent;
 }
-.welcome-wrap .photo.uploaded .preview::before {
+.welcome-wrap .photo.uploaded .preview svg {
   display: none;
 }
-.welcome-wrap .photo:hover .preview::after {
+.welcome-wrap .photo:hover .preview::before {
   opacity: 1;
 }
 .preview {
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
-.preview::before {
-  content: '';
+.preview svg {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
-  height: 30%;
-  background-image: url('../img/user.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  width: 50%;
+  height: 50%;
+  z-index: -1;
 }
-.preview::after {
+.preview::before {
   content: '更換大頭貼';
   position: absolute;
   top: 0;
